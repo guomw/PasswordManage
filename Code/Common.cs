@@ -29,7 +29,21 @@ namespace PasswordManage.Code
         /// <returns></returns>
         public string filePath(string key)
         {
-            return System.Configuration.ConfigurationManager.AppSettings[key];
+            string path = "";
+            switch (key)
+            {
+                case "treePath":
+                    path = "config/tree";
+                    break;
+                case "gridPath":
+                    path = "config/datastore";
+                    break;
+                case "configPath":
+                    path = "config/config";
+                    break;
+            }
+            return path;
+            //return System.Configuration.ConfigurationManager.AppSettings[key];
         }
 
         #region MD5加密

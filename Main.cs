@@ -135,14 +135,8 @@ namespace PasswordManage
                 {
                     if (listCode != null && listCode.Count > 0)
                     {
-                        //string joinStr = "AccountGroupCode in(";
-                        //foreach (string item in listCode)
-                        //{
-                        //    joinStr += item + ",";
-                        //}
-                        //joinStr = joinStr.Substring(0, joinStr.Length - 1) + ")";
-
-                        DataRow[] dr_arr = dt.Select(string.Format("AccountGroupCode in({0})", string.Join(",", listCode)));
+ 
+                        DataRow[] dr_arr = dt.Select(string.Format("AccountGroupCode in({0})", string.Join(",", listCode)));//string.Join(",", listCode)
                         if (dr_arr != null && dr_arr.Length > 0)
                             dt = dr_arr.CopyToDataTable();
                         else

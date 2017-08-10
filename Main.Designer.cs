@@ -54,13 +54,14 @@
             this.gridUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.gridDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.tvNodeAdd = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tvMenuAddParentNode = new System.Windows.Forms.ToolStripMenuItem();
             this.tvMenuAddChildNode = new System.Windows.Forms.ToolStripMenuItem();
             this.tvNodeUpdateNode = new System.Windows.Forms.ToolStripMenuItem();
+            this.新建信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tvNodeDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.tvNodeAddParent = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.新建账号信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -91,7 +92,7 @@
             this.帮助HToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1119, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1119, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -101,7 +102,7 @@
             this.menuCreateAccount,
             this.menuExit});
             this.文件FToolStripMenuItem.Name = "文件FToolStripMenuItem";
-            this.文件FToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.文件FToolStripMenuItem.Size = new System.Drawing.Size(58, 21);
             this.文件FToolStripMenuItem.Text = "文件(F)";
             // 
             // menuCreateAccount
@@ -109,7 +110,7 @@
             this.menuCreateAccount.Image = ((System.Drawing.Image)(resources.GetObject("menuCreateAccount.Image")));
             this.menuCreateAccount.Name = "menuCreateAccount";
             this.menuCreateAccount.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuCreateAccount.Size = new System.Drawing.Size(153, 22);
+            this.menuCreateAccount.Size = new System.Drawing.Size(165, 22);
             this.menuCreateAccount.Text = "新建(&N)";
             this.menuCreateAccount.Click += new System.EventHandler(this.menuCreateAccount_Click);
             // 
@@ -117,7 +118,7 @@
             // 
             this.menuExit.Image = ((System.Drawing.Image)(resources.GetObject("menuExit.Image")));
             this.menuExit.Name = "menuExit";
-            this.menuExit.Size = new System.Drawing.Size(153, 22);
+            this.menuExit.Size = new System.Drawing.Size(165, 22);
             this.menuExit.Text = "退出(&X)";
             this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
             // 
@@ -126,14 +127,14 @@
             this.配置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.设置开机密码ToolStripMenuItem});
             this.配置ToolStripMenuItem.Name = "配置ToolStripMenuItem";
-            this.配置ToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.配置ToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
             this.配置ToolStripMenuItem.Text = "配置(&C)";
             // 
             // 设置开机密码ToolStripMenuItem
             // 
             this.设置开机密码ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("设置开机密码ToolStripMenuItem.Image")));
             this.设置开机密码ToolStripMenuItem.Name = "设置开机密码ToolStripMenuItem";
-            this.设置开机密码ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.设置开机密码ToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.设置开机密码ToolStripMenuItem.Text = "设置开机密码(&P)";
             this.设置开机密码ToolStripMenuItem.Click += new System.EventHandler(this.tsbSetPwd_Click);
             // 
@@ -142,14 +143,14 @@
             this.帮助HToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmAbout});
             this.帮助HToolStripMenuItem.Name = "帮助HToolStripMenuItem";
-            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.帮助HToolStripMenuItem.Text = "帮助(&H)";
             // 
             // tsmAbout
             // 
             this.tsmAbout.Image = ((System.Drawing.Image)(resources.GetObject("tsmAbout.Image")));
             this.tsmAbout.Name = "tsmAbout";
-            this.tsmAbout.Size = new System.Drawing.Size(112, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(116, 22);
             this.tsmAbout.Text = "关于(&A)";
             this.tsmAbout.Click += new System.EventHandler(this.tsmAbout_Click);
             // 
@@ -157,7 +158,7 @@
             // 
             this.sContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sContainer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.sContainer.Location = new System.Drawing.Point(0, 49);
+            this.sContainer.Location = new System.Drawing.Point(0, 50);
             this.sContainer.Name = "sContainer";
             // 
             // sContainer.Panel1
@@ -168,7 +169,7 @@
             // 
             this.sContainer.Panel2.Controls.Add(this.dgvData);
             this.sContainer.Panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.sContainer.Size = new System.Drawing.Size(1119, 549);
+            this.sContainer.Size = new System.Drawing.Size(1119, 548);
             this.sContainer.SplitterDistance = 168;
             this.sContainer.TabIndex = 2;
             // 
@@ -186,7 +187,7 @@
             this.tvNodes.SelectedImageIndex = 0;
             this.tvNodes.ShowPlusMinus = false;
             this.tvNodes.ShowRootLines = false;
-            this.tvNodes.Size = new System.Drawing.Size(168, 549);
+            this.tvNodes.Size = new System.Drawing.Size(168, 548);
             this.tvNodes.TabIndex = 0;
             this.tvNodes.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvNodes_NodeMouseClick);
             // 
@@ -222,7 +223,7 @@
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowTemplate.Height = 23;
-            this.dgvData.Size = new System.Drawing.Size(947, 549);
+            this.dgvData.Size = new System.Drawing.Size(947, 548);
             this.dgvData.TabIndex = 0;
             // 
             // ID
@@ -302,13 +303,13 @@
             this.gridUpdate,
             this.gridDelete});
             this.gridMenu.Name = "gridMenu";
-            this.gridMenu.Size = new System.Drawing.Size(95, 48);
+            this.gridMenu.Size = new System.Drawing.Size(101, 48);
             // 
             // gridUpdate
             // 
             this.gridUpdate.Image = ((System.Drawing.Image)(resources.GetObject("gridUpdate.Image")));
             this.gridUpdate.Name = "gridUpdate";
-            this.gridUpdate.Size = new System.Drawing.Size(94, 22);
+            this.gridUpdate.Size = new System.Drawing.Size(100, 22);
             this.gridUpdate.Text = "修改";
             this.gridUpdate.Click += new System.EventHandler(this.gridUpdate_Click);
             // 
@@ -316,75 +317,84 @@
             // 
             this.gridDelete.Image = ((System.Drawing.Image)(resources.GetObject("gridDelete.Image")));
             this.gridDelete.Name = "gridDelete";
-            this.gridDelete.Size = new System.Drawing.Size(94, 22);
+            this.gridDelete.Size = new System.Drawing.Size(100, 22);
             this.gridDelete.Text = "删除";
             this.gridDelete.Click += new System.EventHandler(this.gridDelete_Click);
             // 
             // tvNodeAdd
             // 
             this.tvNodeAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tvMenuAddParentNode,
             this.tvMenuAddChildNode,
             this.tvNodeUpdateNode,
+            this.新建信息ToolStripMenuItem,
             this.tvNodeDelete});
             this.tvNodeAdd.Name = "tvNodeAdd";
-            this.tvNodeAdd.Size = new System.Drawing.Size(143, 92);
-            // 
-            // tvMenuAddParentNode
-            // 
-            this.tvMenuAddParentNode.Image = ((System.Drawing.Image)(resources.GetObject("tvMenuAddParentNode.Image")));
-            this.tvMenuAddParentNode.Name = "tvMenuAddParentNode";
-            this.tvMenuAddParentNode.Size = new System.Drawing.Size(142, 22);
-            this.tvMenuAddParentNode.Text = "添加分组";
-            this.tvMenuAddParentNode.Click += new System.EventHandler(this.tvMenuAddParentNode_Click);
+            this.tvNodeAdd.Size = new System.Drawing.Size(153, 114);
             // 
             // tvMenuAddChildNode
             // 
             this.tvMenuAddChildNode.Image = ((System.Drawing.Image)(resources.GetObject("tvMenuAddChildNode.Image")));
             this.tvMenuAddChildNode.Name = "tvMenuAddChildNode";
-            this.tvMenuAddChildNode.Size = new System.Drawing.Size(142, 22);
-            this.tvMenuAddChildNode.Text = "添加子分组";
+            this.tvMenuAddChildNode.Size = new System.Drawing.Size(152, 22);
+            this.tvMenuAddChildNode.Text = "新建节点";
             this.tvMenuAddChildNode.Click += new System.EventHandler(this.tvMenuAddChildNode_Click);
             // 
             // tvNodeUpdateNode
             // 
             this.tvNodeUpdateNode.Image = ((System.Drawing.Image)(resources.GetObject("tvNodeUpdateNode.Image")));
             this.tvNodeUpdateNode.Name = "tvNodeUpdateNode";
-            this.tvNodeUpdateNode.Size = new System.Drawing.Size(142, 22);
-            this.tvNodeUpdateNode.Text = "修改分组名称";
+            this.tvNodeUpdateNode.Size = new System.Drawing.Size(152, 22);
+            this.tvNodeUpdateNode.Text = "修改节点名称";
             this.tvNodeUpdateNode.Click += new System.EventHandler(this.tvNodeUpdateNode_Click);
+            // 
+            // 新建信息ToolStripMenuItem
+            // 
+            this.新建信息ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("新建信息ToolStripMenuItem.Image")));
+            this.新建信息ToolStripMenuItem.Name = "新建信息ToolStripMenuItem";
+            this.新建信息ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.新建信息ToolStripMenuItem.Text = "新建账号信息";
+            this.新建信息ToolStripMenuItem.Click += new System.EventHandler(this.menuCreateAccount_Click);
             // 
             // tvNodeDelete
             // 
             this.tvNodeDelete.Image = ((System.Drawing.Image)(resources.GetObject("tvNodeDelete.Image")));
             this.tvNodeDelete.Name = "tvNodeDelete";
-            this.tvNodeDelete.Size = new System.Drawing.Size(142, 22);
-            this.tvNodeDelete.Text = "删除分组";
+            this.tvNodeDelete.Size = new System.Drawing.Size(152, 22);
+            this.tvNodeDelete.Text = "删除当前节点";
             this.tvNodeDelete.Click += new System.EventHandler(this.tvNodeDelete_Click);
             // 
             // tvNodeAddParent
             // 
             this.tvNodeAddParent.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
+            this.toolStripMenuItem3,
+            this.新建账号信息ToolStripMenuItem});
             this.tvNodeAddParent.Name = "tvNodeAdd";
-            this.tvNodeAddParent.Size = new System.Drawing.Size(143, 48);
+            this.tvNodeAddParent.Size = new System.Drawing.Size(149, 70);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(142, 22);
-            this.toolStripMenuItem2.Text = "添加子分组";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem2.Text = "新建节点";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.tvMenuAddChildNode_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
-            this.toolStripMenuItem3.Text = "修改分组名称";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem3.Text = "修改节点名称";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.tvNodeUpdateNode_Click);
+            // 
+            // 新建账号信息ToolStripMenuItem
+            // 
+            this.新建账号信息ToolStripMenuItem.Image = global::PasswordManage.Properties.Resources._new;
+            this.新建账号信息ToolStripMenuItem.Name = "新建账号信息ToolStripMenuItem";
+            this.新建账号信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新建账号信息ToolStripMenuItem.Text = "新建账号信息";
+            this.新建账号信息ToolStripMenuItem.Click += new System.EventHandler(this.menuCreateAccount_Click);
             // 
             // toolStrip1
             // 
@@ -397,7 +407,7 @@
             this.toolStripSeparator3,
             this.toolStripButton2,
             this.toolStripButton3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1119, 25);
             this.toolStrip1.TabIndex = 4;
@@ -508,7 +518,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuCreateAccount;
         private System.Windows.Forms.TreeView tvNodes;
         private System.Windows.Forms.ContextMenuStrip tvNodeAdd;
-        private System.Windows.Forms.ToolStripMenuItem tvMenuAddParentNode;
         private System.Windows.Forms.ToolStripMenuItem tvMenuAddChildNode;
         private System.Windows.Forms.ToolStripMenuItem tvNodeUpdateNode;
         private System.Windows.Forms.ToolStripMenuItem menuExit;
@@ -542,6 +551,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AccountRemark;
         private System.Windows.Forms.DataGridViewTextBoxColumn 分组;
         private System.Windows.Forms.DataGridViewTextBoxColumn 添加时间;
+        private System.Windows.Forms.ToolStripMenuItem 新建信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 新建账号信息ToolStripMenuItem;
     }
 }
 

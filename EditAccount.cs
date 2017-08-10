@@ -133,7 +133,16 @@ namespace PasswordManage
                         dtGrid.Columns.Add("AccountGroupCode", typeof(int));
                     }
                     DataRow row = dtGrid.NewRow();
-                    row["AccountCode"] = dtGrid.Rows.Count + 1;
+                    int accountCode = -1;
+                    foreach (DataRow item in dtGrid.Rows)
+                    {
+                        int result = 0;
+                        int.TryParse(item["AccountCode"].ToString(), out result);
+
+                        if (result > accountCode)
+                            accountCode = result;
+                    }
+                    row["AccountCode"] = accountCode > 0 ? accountCode + 1 : dtGrid.Rows.Count + 1;
                     row["AccountTitle"] = txtAccountTitle.Text;
                     row["AccountName"] = txtAccoutnName.Text;
                     row["AccountPwd"] = txtAccountPwd.Text;
@@ -141,7 +150,7 @@ namespace PasswordManage
                     row["AccountRemark"] = txtAccountRemark.Text;
                     row["AccountAddTime"] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                     myTreeNode myTree = this.cbxTree.TreeView.SelectedNode as myTreeNode;
-                    row["AccountGroupCode"] = myTree != null ? myTree.NodeCode : dfTree.NodeCode;                   
+                    row["AccountGroupCode"] = myTree != null ? myTree.NodeCode : dfTree.NodeCode;
                     dtGrid.Rows.Add(row);
                     #endregion
                 }
@@ -184,7 +193,7 @@ namespace PasswordManage
                     comm.SelectedTreeChild(dtTree, dr_arr, listCode);
                 }
 
-                main.LoadGridView(listCode); 
+                main.LoadGridView(listCode);
                 #endregion
 
                 MessageBox.Show("保存成功！");
@@ -229,7 +238,7 @@ namespace PasswordManage
                     rootNode.ImageIndex = 0;
                     treeView.Nodes.Add(rootNode);
 
-                    if (accountModel!=null)
+                    if (accountModel != null)
                     {
                         if (accountModel.AccountGroupCode == rootNode.NodeCode)
                             dfTree = rootNode;
@@ -249,7 +258,7 @@ namespace PasswordManage
         /// <param name="dr_arr"></param>
         /// <param name="tn_origine"></param>
         private void addNode(DataTable tvData, DataRow[] dr_arr, myTreeNode tn_origine)
-        {       
+        {
             if (dr_arr.Length > 0)
             {
                 //下一级层次
@@ -274,7 +283,7 @@ namespace PasswordManage
                         if (accountModel.AccountGroupCode == tn_sub.NodeCode)
                             dfTree = tn_sub;
                     }
-                    addNode(tvData, child_arr, tn_sub );
+                    addNode(tvData, child_arr, tn_sub);
                 }
             }
         }
